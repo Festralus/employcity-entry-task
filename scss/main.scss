@@ -1,13 +1,3 @@
-@import "base/variables";
-@import "base/mixins";
-@import "base/normalize";
-@import "base/globals";
-
-@import "layout/page";
-@import "layout/header";
-@import "layout/footer";
-
-@import "blocks/buttons";
-@import "blocks/hero";
-@import "blocks/steps";
-@import "blocks/order-form";
+@use "base";
+@use "layout";
+@use "blocks";

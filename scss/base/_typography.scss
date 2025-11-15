@@ -1,0 +1,29 @@
+html {
+  font-size: 16px;
+  line-height: 1rem;
+}
+
+body {
+  font-family: "Lato", "Raleway", Arial, sans-serif;
+  font-weight: 400;
+  color: #000;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header__logo {
+  font-family: "Raleway", "Lato", Arial, sans-serif;
+}
+
+ul,
+ol,
+a,
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+p {
+  font-family: "Lato", "Raleway", Arial, sans-serif;
+}

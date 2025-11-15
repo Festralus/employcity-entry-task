@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>LOREMIPSUM.NET</title>
+    <title>LOREM IPSUM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,22 +17,24 @@
   <body class="page">
     <header class="header">
       <div class="header__inner container">
-        <a href="/" class="header__logo">LOREMIPSUM.<span>NET</span> </a>
+        <a href="/" class="header__logo"
+          >LOREMIPSUM.<span class="header__logo_accent">NET</span></a
+        >
 
         <nav class="header__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link">Бизнес</a>
+              <a href="#" class="nav__link">БИЗНЕС</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">О нас</a>
+              <a href="#" class="nav__link">О НАС</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Цены</a>
+              <a href="#" class="nav__link">ЦЕНЫ</a>
             </li>
             <li class="nav__item">
               <a href="#" class="nav__link nav__link_accent">
-                Оформить заказ
+                ОФОРМИТЬ ЗАКАЗ
               </a>
             </li>
           </ul>
@@ -42,18 +44,18 @@
 
     <main class="page__main">
       <!-- Hero секция -->
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="hero__inner container">
           <div class="hero__content">
             <h1 class="hero__title">
-              <span class="hero__title-main_accent">LOREM IPSUM</span>
-              <span class="hero__title-main">DOLOR SIT AMETCONSECTETUR</span>
-              <span class="hero__title-main_accent">ADIPISCING</span>
+              <span class="hero__title_accent">LOREM IPSUM</span>
+              DOLOR SIT AMETCONSECTETUR
+              <span class="hero__title_accent">ADIPISCING</span>
             </h1>
 
-            <h3 class="hero__text">
+            <h2 class="hero__text">
               At vero eos et accusamus et iusto odio dignissimos ducimus!
-            </h3>
+            </h2>
             <ul class="hero__list list">
               <li class="list__item">Totam rem aperiam eaque ipsa</li>
               <li class="list__item">
@@ -85,58 +87,55 @@
           </header>
 
           <!-- Шаги -->
-          <ul class="steps">
-            <li class="steps__item">
-              <div class="steps__circle">
-                <span
-                  class="steps__icon steps__icon_search"
-                  aria-hidden="true"
-                ></span>
-              </div>
-              <div class="steps__text">Lorem ipsum dolor sit amet</div>
-            </li>
-            <li class="steps__item">
-              <div class="steps__circle">
-                <span
-                  class="steps__icon steps__icon_percent"
-                  aria-hidden="true"
-                ></span>
-              </div>
-              <div class="steps__text">Consecteturadipiscing elit</div>
-            </li>
-            <li class="steps__item">
-              <div class="steps__circle">
-                <span
-                  class="steps__icon steps__icon_clipboard"
-                  aria-hidden="true"
-                ></span>
-              </div>
-              <div class="steps__text">Sed do eiusmod tempor</div>
-            </li>
-            <li class="steps__item">
-              <div class="steps__circle">
-                <span
-                  class="steps__icon steps__icon_mail"
-                  aria-hidden="true"
-                ></span>
-              </div>
-              <div class="steps__text">Esse cillum dolore eu fugiat</div>
-            </li>
-            <li class="steps__item">
-              <div class="steps__circle">
-                <span
-                  class="steps__icon steps__icon_money"
-                  aria-hidden="true"
-                ></span>
-              </div>
-              <div class="steps__text">
-                Excepteur sint occaecat cupidatat non proident
-              </div>
-            </li>
-          </ul>
+          <section class="steps">
+            <ol class="steps__list">
+              <li class="steps__item">
+                <span class="steps__icon">
+                  <img src="img/icon-search.webp" alt="Search" />
+                </span>
+                <p class="steps__text">Lorem ipsum dolor sit amet</p>
+              </li>
+
+              <li class="steps__item">
+                <span class="steps__icon">
+                  <img src="img/icon-percent.webp" alt="Discount" />
+                </span>
+                <p class="steps__text">Consectetur adipiscing elit</p>
+              </li>
+
+              <li class="steps__item">
+                <span class="steps__icon">
+                  <img src="img/icon-docs.webp" alt="Document" />
+                </span>
+                <p class="steps__text">Sed do eiusmod tempor</p>
+              </li>
+
+              <li class="steps__item">
+                <span class="steps__icon">
+                  <img src="img/icon-mail.webp" alt="Mail" />
+                </span>
+                <p class="steps__text">Esse cillum dolore eu fugiat</p>
+              </li>
+
+              <li class="steps__item">
+                <span class="steps__icon">
+                  <img src="img/icon-money.webp" alt="Payment" />
+                </span>
+                <p class="steps__text">
+                  Excepteur sint occaecat cupidatat non proident
+                </p>
+              </li>
+            </ol>
+          </section>
 
           <!-- Форма -->
-          <form class="order-form" action="#" method="post" novalidate>
+          <form
+            class="order-form"
+            id="order-form"
+            action="#"
+            method="post"
+            novalidate
+          >
             <div class="order-form__row order-form__row_top">
               <label class="order-form__field order-form__field_sys-type">
                 <span class="order-form__label">Тип системы</span>
@@ -237,13 +236,18 @@
         </div>
 
         <div class="footer__payments">
-          <span class="footer__payment footer__payment_qiwi">QIWI wallet</span>
-          <span class="footer__payment footer__payment_yandex"
-            >Yandex Money</span
-          >
-          <span class="footer__payment footer__payment_webmoney"
-            >Web Money</span
-          >
+          <div class="footer__payment footer__payment_qiwi">
+            <img class="footer__payment_icon" />
+            <p class="footer__payment_text">QIWI wallet</p>
+          </div>
+          <div class="footer__payment footer__payment_yandex">
+            <img class="footer__payment_icon" />
+            <p class="footer__payment_text">Yandex Money</p>
+          </div>
+          <div class="footer__payment footer__payment_webmoney">
+            <img class="footer__payment_icon" />
+            <p class="footer__payment_text">Web Money</p>
+          </div>
         </div>
 
         <div class="footer__contacts">

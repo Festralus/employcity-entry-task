@@ -1,0 +1,17 @@
+.button {
+  position: relative;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  padding: 0.9375rem 0.625rem;
+
+  border-radius: 0.25rem;
+}
+
+.button_primary {
+  color: #fff;
+  background-color: #3e9cdc;
+  border: 1px solid #ffffff;
+  max-width: 11.5rem;
+}

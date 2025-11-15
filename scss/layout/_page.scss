@@ -1,0 +1,63 @@
+main {
+  margin-top: 6.25rem;
+  position: relative;
+  display: block;
+}
+.hero {
+  position: relative;
+  display: block;
+
+  width: 100%;
+  background-image: url("../img/hero-photo.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  &__title {
+    position: relative;
+    display: block;
+
+    padding-top: 6.4rem;
+
+    max-width: 48rem;
+    font-size: 3rem;
+    line-height: 3.625rem;
+    text-transform: uppercase;
+    color: #000;
+
+    &_accent {
+      color: #3e9cdc;
+    }
+  }
+
+  &__text {
+    position: relative;
+    display: block;
+
+    margin-top: 5rem;
+
+    color: #000;
+  }
+
+  &__list .list__item {
+    color: #000;
+
+    &::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+
+.order {
+  position: relative;
+  display: block;
+
+  width: 100%;
+  background-image: url("../img/background.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
