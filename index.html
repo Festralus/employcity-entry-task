@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LOREMIPSUM.NET</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Raleway:wght@400;600;700&family=Golos+Text:wght@400;600;700&family=Merriweather:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header__inner container">
+        <a href="/" class="header__logo">LOREMIPSUM.<span>NET</span> </a>
+
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Бизнес</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">О нас</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Цены</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link nav__link_accent">
+                Оформить заказ
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page__main">
+      <!-- Hero секция -->
+      <section class="hero">
+        <div class="hero__inner container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              <span class="hero__title-main_accent">LOREM IPSUM</span>
+              <span class="hero__title-main">DOLOR SIT AMETCONSECTETUR</span>
+              <span class="hero__title-main_accent">ADIPISCING</span>
+            </h1>
+
+            <h3 class="hero__text">
+              At vero eos et accusamus et iusto odio dignissimos ducimus!
+            </h3>
+            <ul class="hero__list list">
+              <li class="list__item">Totam rem aperiam eaque ipsa</li>
+              <li class="list__item">
+                Sit voluptatem accusantium doloremque laudantium
+              </li>
+              <li class="list__item">
+                Sed ut perspiciatis, unde omnis iste natus error
+              </li>
+            </ul>
+
+            <div class="hero__actions">
+              <a href="#" class="button button_primary">ЗАКАЗАТЬ</a>
+              <a href="#" class="button button_secondary">ПОДРОБНЕЕ</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Оформление заказа -->
+      <section class="order" id="order">
+        <div class="order__inner container">
+          <header class="order__header">
+            <h2 class="order__title">
+              Оформление <span class="order__title_accent">заказа</span>
+            </h2>
+            <p class="order__subtitle">
+              Перед заполнением формы ознакомьтесь с нашей схемой работы!
+            </p>
+          </header>
+
+          <!-- Шаги -->
+          <ul class="steps">
+            <li class="steps__item">
+              <div class="steps__circle">
+                <span
+                  class="steps__icon steps__icon_search"
+                  aria-hidden="true"
+                ></span>
+              </div>
+              <div class="steps__text">Lorem ipsum dolor sit amet</div>
+            </li>
+            <li class="steps__item">
+              <div class="steps__circle">
+                <span
+                  class="steps__icon steps__icon_percent"
+                  aria-hidden="true"
+                ></span>
+              </div>
+              <div class="steps__text">Consecteturadipiscing elit</div>
+            </li>
+            <li class="steps__item">
+              <div class="steps__circle">
+                <span
+                  class="steps__icon steps__icon_clipboard"
+                  aria-hidden="true"
+                ></span>
+              </div>
+              <div class="steps__text">Sed do eiusmod tempor</div>
+            </li>
+            <li class="steps__item">
+              <div class="steps__circle">
+                <span
+                  class="steps__icon steps__icon_mail"
+                  aria-hidden="true"
+                ></span>
+              </div>
+              <div class="steps__text">Esse cillum dolore eu fugiat</div>
+            </li>
+            <li class="steps__item">
+              <div class="steps__circle">
+                <span
+                  class="steps__icon steps__icon_money"
+                  aria-hidden="true"
+                ></span>
+              </div>
+              <div class="steps__text">
+                Excepteur sint occaecat cupidatat non proident
+              </div>
+            </li>
+          </ul>
+
+          <!-- Форма -->
+          <form class="order-form" action="#" method="post" novalidate>
+            <div class="order-form__row order-form__row_top">
+              <label class="order-form__field order-form__field_sys-type">
+                <span class="order-form__label">Тип системы</span>
+                <select class="order-form__control" name="system_type" required>
+                  <option value="" selected disabled>
+                    Выберите тип системы
+                  </option>
+                  <option value="sed">Sed ut perspiciatis</option>
+                  <option value="nemo">Nemo enim ipsam</option>
+                  <option value="et">Et harum quidem</option>
+                  <option value="temporibus">Temporibus autem</option>
+                  <option value="itaque">Itaque earum rerum</option>
+                  <option value="maxime">Maxime perferendis amet</option>
+                  <option value="excepturi">Excepturi velit nam veniam</option>
+                  <option value="unde">Unde dolorum</option>
+                  <option value="rerum">Rerum dicta temporibus</option>
+                  <option value="deleniti">Deleniti aliquid esse</option>
+                  <option value="accusamus">Accusamus aliquam dolore</option>
+                  <option value="molestias">
+                    Molestias nihil eos sapiente
+                  </option>
+                  <option value="impedit">Impedit minus velit rem ut</option>
+                </select>
+              </label>
+
+              <label class="order-form__field order-form__field_email">
+                <span class="order-form__label">Ваш e-mail</span>
+                <input
+                  class="order-form__control"
+                  type="email"
+                  name="email"
+                  placeholder="Ваш e-mail"
+                  required
+                />
+              </label>
+
+              <label class="order-form__field order-form__field_name">
+                <span class="order-form__label">Ваше имя</span>
+                <input
+                  class="order-form__control"
+                  type="text"
+                  name="name"
+                  placeholder="Ваше имя"
+                  required
+                />
+              </label>
+            </div>
+
+            <div class="order-form__row order-form__row_range">
+              <div class="order-form__range">
+                <label class="order-form__range-label" for="percentage">
+                  Sed ut perspiciatis, unde omnis iste natus
+                </label>
+                <div class="order-form__range-track">
+                  <input
+                    id="percentage"
+                    class="order-form__control order-form__control_range"
+                    type="range"
+                    name="percentage"
+                    min="0"
+                    max="100"
+                    value="75"
+                  />
+                  <div class="order-form__range-value" data-range-output>
+                    75&nbsp;%
+                  </div>
+                </div>
+              </div>
+
+              <label class="order-form__field order-form__field_file">
+                <span class="order-form__label">Прикрепить файл</span>
+                <input
+                  class="order-form__control order-form__control_file"
+                  type="file"
+                  name="attachment"
+                />
+                <span class="order-form__file-button">
+                  <span class="order-form__file-icon" aria-hidden="true"></span>
+                  Прикрепить файл
+                </span>
+              </label>
+            </div>
+
+            <div class="order-form__row order-form__row_submit">
+              <button class="button button_primary button_wide" type="submit">
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner container">
+        <div class="footer__copyright">
+          &copy;&nbsp;2018 &laquo;LOREMIPSUM.NET&raquo; Все права защищены.
+        </div>
+
+        <div class="footer__payments">
+          <span class="footer__payment footer__payment_qiwi">QIWI wallet</span>
+          <span class="footer__payment footer__payment_yandex"
+            >Yandex Money</span
+          >
+          <span class="footer__payment footer__payment_webmoney"
+            >Web Money</span
+          >
+        </div>
+
+        <div class="footer__contacts">
+          <a href="mailto:info@ipsum228.com" class="footer__link">
+            info@ipsum228.com
+          </a>
+          <a href="#" class="footer__link footer__link_vk">Мы вконтакте</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
