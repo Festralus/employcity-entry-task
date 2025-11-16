@@ -7,14 +7,39 @@
   cursor: pointer;
 
   width: 100%;
-  min-width: 7.7rem;
-  max-width: 11.56rem;
+  max-width: 90vw;
+
+  margin-left: auto;
+  margin-right: auto;
 
   justify-content: center;
   align-items: center;
   padding: 0.9375rem 0.625rem;
 
   border-radius: 0.25rem;
+
+  @include xs {
+    min-width: 50%;
+    width: 100%;
+    max-width: 30rem;
+  }
+
+  @include xl {
+    margin-top: 0;
+    margin-right: 0;
+    min-width: 0;
+    width: 100%;
+    max-width: 34rem;
+    margin-left: clamp(2rem, 3.3vw, 5rem);
+  }
+
+  @include xxl {
+    min-width: 7.7rem;
+    max-width: 11.56rem;
+    margin-left: 0;
+
+    margin-bottom: 4rem;
+  }
 
   &_primary {
     color: $color-btn-primary-text-default;
@@ -34,6 +59,13 @@
     color: $color-btn-secondary-text-default;
     background-color: $color-btn-secondary-bg-default;
     border: 1px solid #6f6d7b;
+
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+
+    @include xxl {
+      margin-top: 0;
+    }
 
     &:hover {
       background-color: $color-btn-secondary-bg-hover;
