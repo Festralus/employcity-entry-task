@@ -20,12 +20,27 @@
     color: $color-btn-primary-text-default;
     background-color: $color-btn-primary-bg-default;
     border: 1px solid $color-white;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: $color-btn-primary-bg-hover;
+    }
+    &:active {
+      background-color: $color-btn-primary-bg-active;
+    }
   }
 
   &_secondary {
     color: $color-btn-secondary-text-default;
-    background-color: $color-white;
+    background-color: $color-btn-secondary-bg-default;
     border: 1px solid #6f6d7b;
+
+    &:hover {
+      background-color: $color-btn-secondary-bg-hover;
+    }
+    &:active {
+      background-color: $color-btn-secondary-bg-active;
+    }
   }
 }
 

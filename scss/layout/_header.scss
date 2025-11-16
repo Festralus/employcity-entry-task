@@ -1,3 +1,5 @@
+@use "../base/" as *;
+
 // Fixed header
 .header {
   position: fixed;
@@ -9,13 +11,59 @@
   z-index: 100;
   background: rgba(16, 16, 29, 0.9);
 
+  &__burger-menu {
+    position: relative;
+    display: block;
+
+    width: 2.6rem;
+    height: 2.6rem;
+    background-image: url(../../img/icon-burger-menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+
+    @include md {
+      display: none;
+    }
+  }
+
+  &__burger-overlay {
+    position: fixed;
+    z-index: 120;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    pointer-events: none;
+
+    @include md {
+      display: none;
+    }
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
   &__inner {
     position: relative;
     display: flex;
 
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 2rem;
     height: 6.25rem;
+
+    @include lg {
+      justify-content: space-evenly;
+      padding: 0;
+    }
+
+    @include xxl {
+      justify-content: space-between;
+      padding: 0 23.4rem;
+    }
   }
 
   &__logo {
@@ -35,30 +83,79 @@
   }
 }
 .nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(80vw, 20rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(16, 16, 29, 0.97);
+  z-index: 200;
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+
+  @include md {
+    position: static;
+    height: auto;
+    width: auto;
+    transform: none;
+    background: transparent;
+    display: block;
+  }
+
+  &_open {
+    transform: translateX(0);
+  }
+
   &__list {
     position: relative;
     display: flex;
+    flex-direction: column;
 
     list-style: none;
-    align-items: center;
-    justify-content: space-between;
-
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 0.8125rem;
-    line-height: 1rem;
-    gap: clamp(1rem, 3vw, 3.75rem);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    color: #fff;
+    text-align: center;
+
+    gap: 2rem;
+
+    @include md {
+      font-size: 0.875rem;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: clamp(1rem, 3vw, 3.75rem);
+    }
   }
 
   &__item {
-    position: relative;
-    display: block;
-
     flex-shrink: 0;
-    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+
+    &:active {
+      color: $color-accent;
+      transform: scale(1.1);
+    }
+
+    &:focus-visible {
+      border-radius: 2rem;
+      outline: 3px solid $color-accent;
+      outline-offset: 2px;
+    }
   }
 
   &__link {
+    color: #fff;
+    text-decoration: none;
+
     &:visited {
       color: #fff;
     }

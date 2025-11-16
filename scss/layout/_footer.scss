@@ -4,24 +4,22 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
   min-height: 80px;
   background-color: #3d4050;
 
-  padding: 0 2rem;
+  padding: 0 clamp(1rem, 16vw, 23.5rem);
 
   color: #fff;
   font-size: 14px;
-
-  column-gap: clamp(0.5rem, 4vw, 3rem);
 
   &__divider {
     flex: 0 0 1px;
     align-self: center;
     height: 1.1rem;
     background-color: $color-white;
-    opacity: 0.3;
+    opacity: 1;
   }
 
   &__payments {
