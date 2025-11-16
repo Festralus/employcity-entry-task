@@ -50,12 +50,12 @@
   }
 
   .first-divider {
-    flex: 0 0 calc(max(1px, 0.08rem));
+    flex: 0 0 1px;
     align-self: center;
     order: 9;
 
     width: 95vw;
-    height: calc(max(1px, 0.08rem));
+    height: 1px;
 
     opacity: 1;
     background-color: $color-white;
@@ -65,31 +65,31 @@
     }
 
     @include xxl {
-      flex: 0 0 calc(max(1px, 0.08rem));
+      flex: 0 0 1px;
       order: 2;
-      width: calc(max(1px, 0.08rem));
+      width: 1px;
       height: 1.1rem;
     }
   }
 
   .second-divider {
-    flex: 0 0 calc(max(1px, 0.08rem));
+    flex: 0 0 1px;
     align-self: center;
 
     width: 95vw;
-    height: calc(max(1px, 0.08rem));
+    height: 1px;
 
     opacity: 1;
     background-color: $color-white;
 
     @include md {
-      width: calc(max(1px, 0.08rem));
+      width: 1px;
       height: 2.1rem;
     }
 
     @include xxl {
       order: 4;
-      width: calc(max(1px, 0.08rem));
+      width: 1px;
       height: 1.1rem;
     }
   }

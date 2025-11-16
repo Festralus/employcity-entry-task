@@ -81,7 +81,7 @@
 
     background-color: rgb(255 255 255 / 85%);
     outline: none;
-    box-shadow: 0 0 0 calc(max(1px, 0.08rem)) rgb(255 255 255 / 20%);
+    box-shadow: 0 0 0 1px rgb(255 255 255 / 20%);
 
     transition: box-shadow 0.2s ease, background-color 0.2s ease,
       color 0.2s ease;
@@ -91,12 +91,12 @@
     }
 
     &:hover {
-      box-shadow: 0 0 0 calc(max(1px, 0.08rem)) #42a9ed;
+      box-shadow: 0 0.4px 0 1px #42a9ed;
     }
 
     &:focus-visible {
       background-color: $color-white;
-      box-shadow: 0 0 0 0.125rem #42a9ed;
+      box-shadow: 0 0 0 3px #42a9ed;
     }
 
     &_select {
@@ -171,7 +171,7 @@
         width: 1.1rem;
         height: 1.1rem;
         margin-top: -0.4rem;
-        border: 0.185rem solid #286690;
+        border: 3px solid #286690;
         border-radius: 50%;
 
         appearance: none;
@@ -185,7 +185,7 @@
 
         width: 1.1rem;
         height: 1.1rem;
-        border: 0.185rem solid #286690;
+        border: 3px solid #286690;
         border-radius: 50%;
 
         background: #42a9ed;
@@ -194,11 +194,11 @@
       }
 
       &:hover::-webkit-slider-thumb {
-        box-shadow: 0 0 0 0.185rem rgb(66 169 237 / 35%);
+        box-shadow: 0 0 0 3px rgb(66 169 237 / 35%);
       }
 
       &:hover::-moz-range-thumb {
-        box-shadow: 0 0 0 0.185rem rgb(66 169 237 / 35%);
+        box-shadow: 0 0 0 3px rgb(66 169 237 / 35%);
       }
     }
 
@@ -288,7 +288,7 @@
     .order-form__control_select {
       color: $color-white;
       background-color: rgb(61 64 80 / 85%);
-      box-shadow: 0 0 0 calc(max(1px, 0.08rem)) #3d4050;
+      box-shadow: 0 0 0 1px #3d4050;
     }
 
     .order-form__control_arrow {

@@ -39,7 +39,7 @@
   }
 
   &_primary {
-    border: calc(max(1px, 0.08rem)) solid $color-white;
+    border: 1px solid $color-white;
     color: $color-btn-primary-text-default;
     background-color: $color-btn-primary-bg-default;
     transition: background-color 0.2s ease;
@@ -56,7 +56,7 @@
   &_secondary {
     margin-top: 0.5rem;
     margin-bottom: 4rem;
-    border: calc(max(1px, 0.08rem)) solid #6f6d7b;
+    border: 1px solid #6f6d7b;
 
     color: $color-btn-secondary-text-default;
 
@@ -95,7 +95,7 @@
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
 
     .order-form__field_file:focus-within & {
-      box-shadow: 0 0 0 0.125rem #42a9ed;
+      box-shadow: 0 0 0 3px #42a9ed;
     }
   }
 }

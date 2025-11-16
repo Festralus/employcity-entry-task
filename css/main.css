@@ -375,11 +375,11 @@ main {
   }
 }
 .footer .first-divider {
-  flex: 0 0 max(1px, 0.08rem);
+  flex: 0 0 1px;
   align-self: center;
   order: 9;
   width: 95vw;
-  height: max(1px, 0.08rem);
+  height: 1px;
   opacity: 1;
   background-color: #fff;
 }
@@ -390,30 +390,30 @@ main {
 }
 @media (min-width: 1815px) {
   .footer .first-divider {
-    flex: 0 0 max(1px, 0.08rem);
+    flex: 0 0 1px;
     order: 2;
-    width: max(1px, 0.08rem);
+    width: 1px;
     height: 1.1rem;
   }
 }
 .footer .second-divider {
-  flex: 0 0 max(1px, 0.08rem);
+  flex: 0 0 1px;
   align-self: center;
   width: 95vw;
-  height: max(1px, 0.08rem);
+  height: 1px;
   opacity: 1;
   background-color: #fff;
 }
 @media (min-width: 768px) {
   .footer .second-divider {
-    width: max(1px, 0.08rem);
+    width: 1px;
     height: 2.1rem;
   }
 }
 @media (min-width: 1815px) {
   .footer .second-divider {
     order: 4;
-    width: max(1px, 0.08rem);
+    width: 1px;
     height: 1.1rem;
   }
 }
@@ -707,7 +707,7 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
   }
 }
 .button_primary {
-  border: max(1px, 0.08rem) solid #fff;
+  border: 1px solid #fff;
   color: #fff;
   background-color: #3e9cdc;
   transition: background-color 0.2s ease;
@@ -721,7 +721,7 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
 .button_secondary {
   margin-top: 0.5rem;
   margin-bottom: 4rem;
-  border: max(1px, 0.08rem) solid #6f6d7b;
+  border: 1px solid #6f6d7b;
   color: #2a2b30;
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -751,7 +751,7 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 .order-form__field_file:focus-within .order-form__file-button {
-  box-shadow: 0 0 0 0.125rem #42a9ed;
+  box-shadow: 0 0 0 3px #42a9ed;
 }
 
 #submit_button {
@@ -918,18 +918,18 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
   color: #272733;
   background-color: rgba(255, 255, 255, 0.85);
   outline: none;
-  box-shadow: 0 0 0 max(1px, 0.08rem) rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
   transition: box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 .order-form__control::placeholder {
   color: rgba(39, 39, 51, 0.7);
 }
 .order-form__control:hover {
-  box-shadow: 0 0 0 max(1px, 0.08rem) #42a9ed;
+  box-shadow: 0 0.4px 0 1px #42a9ed;
 }
 .order-form__control:focus-visible {
   background-color: #fff;
-  box-shadow: 0 0 0 0.125rem #42a9ed;
+  box-shadow: 0 0 0 3px #42a9ed;
 }
 .order-form__control_select {
   cursor: pointer;
@@ -984,7 +984,7 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
   width: 1.1rem;
   height: 1.1rem;
   margin-top: -0.4rem;
-  border: 0.185rem solid #286690;
+  border: 3px solid #286690;
   border-radius: 50%;
   appearance: none;
   background: #42a9ed;
@@ -994,16 +994,16 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
   cursor: pointer;
   width: 1.1rem;
   height: 1.1rem;
-  border: 0.185rem solid #286690;
+  border: 3px solid #286690;
   border-radius: 50%;
   background: #42a9ed;
   transition: box-shadow 0.2s ease;
 }
 .order-form__control_range:hover::-webkit-slider-thumb {
-  box-shadow: 0 0 0 0.185rem rgba(66, 169, 237, 0.35);
+  box-shadow: 0 0 0 3px rgba(66, 169, 237, 0.35);
 }
 .order-form__control_range:hover::-moz-range-thumb {
-  box-shadow: 0 0 0 0.185rem rgba(66, 169, 237, 0.35);
+  box-shadow: 0 0 0 3px rgba(66, 169, 237, 0.35);
 }
 .order-form__control_file {
   display: none;
@@ -1068,7 +1068,7 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
 .order-form__select_open .order-form__control_select {
   color: #fff;
   background-color: rgba(61, 64, 80, 0.85);
-  box-shadow: 0 0 0 max(1px, 0.08rem) #3d4050;
+  box-shadow: 0 0 0 1px #3d4050;
 }
 .order-form__select_open .order-form__control_arrow {
   transform: translateY(-50%) rotate(180deg);
