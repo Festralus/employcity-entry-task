@@ -96,7 +96,7 @@
 
     &:focus-visible {
       box-shadow: 0 0 0 0.125rem #42a9ed;
-      background-color: #ffffff;
+      background-color: $color-white;
     }
 
     &_select {
@@ -190,18 +190,18 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background: #3e9cdc;
+      background: $color-accent;
       border-radius: 2rem;
     }
 
     scrollbar-width: thin;
-    scrollbar-color: #3e9cdc #3d4050;
+    scrollbar-color: $color-accent #3d4050;
   }
 
   &__select-option {
     padding: 0.44rem 1rem;
     font-size: 1.2rem;
-    color: #ffffff;
+    color: $color-white;
     cursor: pointer;
     white-space: nowrap;
 
@@ -209,24 +209,24 @@
 
     &:hover {
       background-color: transparent;
-      color: #3e9cdc;
+      color: $color-accent;
     }
 
     &.is-selected {
-      color: #3e9cdc;
+      color: $color-accent;
     }
   }
 
   &__select_open {
     .order-form__control_select {
       background-color: rgba(61, 64, 80, 0.85);
-      color: #ffffff;
+      color: $color-white;
       box-shadow: 0 0 0 calc(max(1px, 0.08rem)) #3d4050;
     }
 
     .order-form__control_arrow {
       transform: translateY(-50%) rotate(180deg);
-      color: #ffffff;
+      color: $color-white;
     }
   }
 
@@ -242,7 +242,6 @@
     gap: 0.9rem;
 
     @include lg {
-      gap: 0.625rem;
       margin-bottom: 0;
     }
 
@@ -263,7 +262,7 @@
     align-self: start;
     font-size: 0.9rem;
     line-height: 1.4;
-    color: #ffffff;
+    color: $color-white;
   }
 
   &__range-track {
@@ -333,8 +332,11 @@
     position: relative;
     display: block;
 
+    text-align: center;
+    line-height: 2.75rem;
+
     width: 100%;
-    max-height: 3rem;
+    height: 3rem;
     max-width: 40rem;
     margin-top: auto;
     margin-left: auto;

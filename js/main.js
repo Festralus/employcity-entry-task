@@ -26,16 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleMenu();
   });
 
-  // Закрытие по клику по пункту меню
   nav.addEventListener("click", function (event) {
     if (event.target.closest(".nav__link")) {
       closeMenu();
     }
   });
 
-  // Закрытие по клику вне меню
   document.addEventListener("click", function (event) {
-    // если меню закрыто — ничего не делаем
     if (!nav.classList.contains("nav_open")) return;
 
     const clickInsideMenu = event.target.closest(".header__nav");
@@ -175,35 +172,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   })();
-
-  // Navigation scroll
-  const scrollTarget = document.querySelector(".order__title");
-
-  if (scrollTarget) {
-    const scrollTriggers = document.querySelectorAll(
-      ".nav__link_accent, .hero__actions .button_primary"
-    );
-
-    function scrollToOrder(event) {
-      event.preventDefault();
-
-      const header = document.querySelector(".header");
-      const headerHeight = header ? header.offsetHeight : 0;
-
-      const targetY =
-        scrollTarget.getBoundingClientRect().top +
-        window.pageYOffset -
-        headerHeight -
-        20;
-
-      window.scrollTo({
-        top: targetY,
-        behavior: "smooth",
-      });
-    }
-
-    scrollTriggers.forEach(function (trigger) {
-      trigger.addEventListener("click", scrollToOrder);
-    });
-  }
 });

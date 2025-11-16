@@ -77,7 +77,7 @@
     }
 
     &_accent {
-      color: #3e9cdc;
+      color: $color-accent;
     }
   }
 
@@ -104,7 +104,7 @@
     margin-top: 3rem;
     margin-left: 0.5rem;
 
-    color: #000;
+    color: $color-black;
 
     font-weight: 700;
     font-size: 1.25rem;

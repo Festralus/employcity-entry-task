@@ -16,7 +16,7 @@
   padding: 0;
   gap: 1rem;
 
-  color: #fff;
+  color: $color-white;
 
   @include md {
     padding-top: 1rem;
@@ -146,11 +146,11 @@
     justify-content: center;
 
     text-decoration: none;
-    color: #fff;
+    color: $color-white;
     white-space: nowrap;
 
     &:visited {
-      color: #fff;
+      color: $color-white;
     }
 
     &:hover,
@@ -180,11 +180,11 @@
 }
 
 a[href^="mailto"] {
-  color: #fff !important;
+  color: $color-white !important;
   text-decoration: none !important;
 
   &:visited {
-    color: #fff !important;
+    color: $color-white !important;
   }
 
   &:hover,

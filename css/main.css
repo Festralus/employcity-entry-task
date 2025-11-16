@@ -243,7 +243,7 @@ main {
   font-size: 1.75rem;
   line-height: 2rem;
   text-transform: uppercase;
-  color: #fff;
+  color: #ffffff;
 }
 .header__logo_accent {
   color: #42a9ed;
@@ -285,7 +285,7 @@ main {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.2;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   gap: 2rem;
 }
@@ -312,11 +312,11 @@ main {
   outline-offset: 0.125rem;
 }
 .nav__link {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
 }
 .nav__link:visited {
-  color: #fff;
+  color: #ffffff;
 }
 .nav__link:hover {
   color: #43abf0;
@@ -337,7 +337,7 @@ main {
   background-color: #3d4050;
   padding: 0;
   gap: 1rem;
-  color: #fff;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .footer {
@@ -472,11 +472,11 @@ main {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   white-space: nowrap;
 }
 .footer__link:visited {
-  color: #fff;
+  color: #ffffff;
 }
 .footer__link:hover, .footer__link:active {
   color: #42a9ed;
@@ -498,11 +498,11 @@ main {
 }
 
 a[href^=mailto] {
-  color: #fff !important;
+  color: #ffffff !important;
   text-decoration: none !important;
 }
 a[href^=mailto]:visited {
-  color: #fff !important;
+  color: #ffffff !important;
 }
 a[href^=mailto]:hover, a[href^=mailto]:active {
   color: #42a9ed !important;
@@ -616,7 +616,7 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
   display: block;
   margin-top: 3rem;
   margin-left: 0.5rem;
-  color: #000;
+  color: #000000;
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 1.5rem;
@@ -744,11 +744,9 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
   align-items: center;
   justify-content: center;
   gap: 0.7rem;
-  height: 3rem;
   background-color: transparent;
   font-weight: 600;
   font-size: 0.9rem;
-  line-height: 1.1rem;
   text-transform: uppercase;
   color: #000000;
   cursor: pointer;
@@ -1052,7 +1050,6 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
 }
 @media (min-width: 1024px) {
   .order-form__range {
-    gap: 0.625rem;
     margin-bottom: 0;
   }
 }
@@ -1131,8 +1128,10 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
 .order-form__field_file {
   position: relative;
   display: block;
+  text-align: center;
+  line-height: 2.75rem;
   width: 100%;
-  max-height: 3rem;
+  height: 3rem;
   max-width: 40rem;
   margin-top: auto;
   margin-left: auto;
