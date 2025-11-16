@@ -7,101 +7,99 @@
 
   &__list {
     position: relative;
+
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
     gap: clamp(2rem, 5vw, 8.625rem);
+    align-items: center;
+    justify-content: flex-start;
 
     width: max-content;
     margin-inline: auto;
 
     @include sm {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
+      flex-flow: row wrap;
       align-items: flex-start;
+      justify-content: center;
+
       width: 100%;
       margin-inline: auto;
     }
 
     @include xl {
+      flex-direction: row;
+      align-items: flex-start;
       width: max-content;
       margin-top: 5rem;
-      align-items: flex-start;
-      flex-direction: row;
     }
 
     &::before {
       @include xl {
+        pointer-events: none;
         content: "";
-        position: absolute;
-        top: 3.125rem;
 
-        left: calc(3.125rem + 1.5rem);
+        position: absolute;
+        z-index: 0;
+        top: 3.125rem;
         right: calc(3.125rem + 1.5rem);
+        left: calc(3.125rem + 1.5rem);
 
         height: 0.4rem;
+
         background-image: radial-gradient(
           circle,
           #cfcfcf 0.2rem,
           transparent 0.2rem
         );
-        background-size: 1.3rem 0.4rem;
         background-repeat: repeat-x;
         background-position: center;
-
-        pointer-events: none;
-        z-index: 0;
+        background-size: 1.3rem 0.4rem;
       }
     }
   }
 
   &__item {
     position: relative;
-    display: block;
-    max-width: 11.8rem;
-    min-width: 7rem;
     z-index: 1;
 
-    @include md {
-    }
+    display: block;
+
+    min-width: 7rem;
+    max-width: 11.8rem;
   }
 
   &__visual {
-    display: block;
-    position: relative;
-
     pointer-events: none;
     user-select: none;
+    position: relative;
+    display: block;
   }
 
   &__circle {
-    display: block;
     position: relative;
 
-    margin: auto;
+    display: block;
 
     width: 6.25rem;
     height: 6.25rem;
+    margin: auto;
   }
 
   &__icon {
-    display: block;
     position: absolute;
-
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
+
+    display: block;
 
     width: 2.625rem;
     height: 2.625rem;
   }
 
   &__text {
-    display: block;
     position: relative;
+    display: block;
     margin-top: 1.25rem;
   }
 }

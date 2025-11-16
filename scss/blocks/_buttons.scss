@@ -1,67 +1,66 @@
 @use "../base/" as *;
 
 .button {
-  position: relative;
-  display: flex;
-
   cursor: pointer;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 100%;
   max-width: 90vw;
-
-  margin-left: auto;
   margin-right: auto;
-
-  justify-content: center;
-  align-items: center;
+  margin-left: auto;
   padding: 0.9375rem 0.625rem;
-
   border-radius: 0.25rem;
 
   @include xs {
-    min-width: 50%;
     width: 100%;
+    min-width: 50%;
     max-width: 30rem;
   }
 
   @include xl {
+    width: 100%;
+    min-width: 0;
+    max-width: 34rem;
     margin-top: 0;
     margin-right: 0;
-    min-width: 0;
-    width: 100%;
-    max-width: 34rem;
     margin-left: clamp(2rem, 3.3vw, 5rem);
   }
 
   @include xxl {
     min-width: 7.7rem;
     max-width: 11.56rem;
-    margin-left: 0;
-
     margin-bottom: 4rem;
+    margin-left: 0;
   }
 
   &_primary {
+    border: calc(max(1px, 0.08rem)) solid $color-white;
     color: $color-btn-primary-text-default;
     background-color: $color-btn-primary-bg-default;
-    border: calc(max(1px, 0.08rem)) solid $color-white;
     transition: background-color 0.2s ease;
 
     &:hover {
       background-color: $color-btn-primary-bg-hover;
     }
+
     &:active {
       background-color: $color-btn-primary-bg-active;
     }
   }
 
   &_secondary {
-    color: $color-btn-secondary-text-default;
-    background-color: $color-btn-secondary-bg-default;
-    border: calc(max(1px, 0.08rem)) solid #6f6d7b;
-
     margin-top: 0.5rem;
     margin-bottom: 4rem;
+    border: calc(max(1px, 0.08rem)) solid #6f6d7b;
+
+    color: $color-btn-secondary-text-default;
+
+    background-color: $color-btn-secondary-bg-default;
 
     @include xxl {
       margin-top: 0;
@@ -70,6 +69,7 @@
     &:hover {
       background-color: $color-btn-secondary-bg-hover;
     }
+
     &:active {
       background-color: $color-btn-secondary-bg-active;
     }
@@ -78,19 +78,20 @@
 
 .order-form {
   &__file-button {
+    cursor: pointer;
+
     display: flex;
+    gap: 0.7rem;
     align-items: center;
     justify-content: center;
-    gap: 0.7rem;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: $color-black;
+    text-transform: uppercase;
 
     background-color: transparent;
 
-    font-weight: 600;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    color: $color-black;
-
-    cursor: pointer;
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
 
     .order-form__field_file:focus-within & {
@@ -102,7 +103,6 @@
 #submit_button {
   position: relative;
   display: block;
-
   width: 100%;
   min-width: fit-content;
 }

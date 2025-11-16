@@ -4,15 +4,15 @@ html {
 }
 
 body {
-  font-family: "Lato", "Raleway", Arial, sans-serif;
+  font-family: Lato, Raleway, Arial, sans-serif;
   font-weight: 400;
-  color: #000;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  color: #000;
+  text-rendering: optimizelegibility;
 }
 
 .header__logo {
-  font-family: "Raleway", "Lato", Arial, sans-serif;
+  font-family: Raleway, Lato, Arial, sans-serif;
 }
 
 ul,
@@ -25,12 +25,12 @@ h2,
 h3,
 .h3,
 p {
-  font-family: "Lato", "Raleway", Arial, sans-serif;
+  font-family: Lato, Raleway, Arial, sans-serif;
   font-size: 1.2rem;
   line-height: 1.3rem;
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   html {
     font-size: 14px;
     line-height: 14px;
@@ -51,14 +51,14 @@ p {
   }
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   html {
     font-size: 16px;
     line-height: 1rem;
   }
 }
 
-@media (min-width: 2100px) {
+@media (width >= 2100px) {
   html {
     font-size: clamp(16px, calc(16px + (20 * ((100vw - 2100px) / 1920))), 32px);
     line-height: 1rem;
