@@ -86,17 +86,17 @@
 
       <!-- Оформление заказа -->
       <section class="order" id="order">
-        <!-- <header id="order-header" class="order__header">
+        <header id="order-header" class="order__header">
           <h2 class="order__title">
             ОФОРМЛЕНИЕ <span class="order__title_accent">ЗАКАЗА</span>
           </h2>
           <p class="order__subtitle">
             Перед заполнением формы ознакомьтесь с нашей схемой работы!
           </p>
-        </header> -->
+        </header>
 
         <!-- Шаги -->
-        <!-- <section class="steps" id="steps">
+        <section class="steps" id="steps">
           <ol class="steps__list">
             <li class="steps__item">
               <div class="steps__visual">
@@ -144,8 +144,28 @@
                 Excepteur sint occaecat cupidatat non proident
               </p>
             </li>
+
+            <!-- Блоки для проверки верстки -->
+
+            <!-- <li class="steps__item">
+              <div class="steps__visual">
+                <img class="steps__circle" src="img/icon-circle.webp" alt="" />
+                <img class="steps__icon" src="img/icon-mail.webp" alt="" />
+              </div>
+
+              <p class="steps__text">Esse cillum dolore eu fugiat</p>
+            </li> -->
+
+            <!-- <li class="steps__item">
+              <div class="steps__visual">
+                <img class="steps__circle" src="img/icon-circle.webp" alt="" />
+                <img class="steps__icon" src="img/icon-mail.webp" alt="" />
+              </div>
+
+              <p class="steps__text">Esse cillum dolore eu fugiat</p>
+            </li> -->
           </ol>
-        </section> -->
+        </section>
 
         <!-- Форма -->
         <form
@@ -293,6 +313,7 @@
                 <input
                   type="hidden"
                   name="system_type"
+                  autocomplete="off"
                   data-select-input
                   required
                 />
@@ -305,6 +326,7 @@
                 class="order-form__control"
                 type="email"
                 name="email"
+                autocomplete="email"
                 placeholder="Ваш e-mail"
                 required
               />
@@ -316,6 +338,7 @@
                 class="order-form__control"
                 type="text"
                 name="name"
+                autocomplete="name"
                 placeholder="Ваше имя"
                 required
               />
@@ -329,6 +352,7 @@
                 class="order-form__control"
                 type="text"
                 name="***"
+                autocomplete="***"
                 placeholder="Ваше ***"
                 required
               />
@@ -340,6 +364,7 @@
                 class="order-form__control"
                 type="text"
                 name="***"
+                autocomplete="***"
                 placeholder="Ваше ***"
                 required
               />

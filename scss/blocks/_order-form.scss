@@ -1,29 +1,47 @@
 @use "../base/" as *;
 
 .order-form {
-  margin-top: 5rem;
+  margin-top: 3rem;
   width: 100%;
 
-  padding: 0 2rem;
+  padding: 0 0.5rem;
 
   &__row {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     place-content: center;
     gap: 1.8rem;
 
-    & > * {
-      flex: 0 0 calc((100% - 2 * 1.8rem) / 3);
-      max-width: calc((100% - 2 * 1.8rem) / 3);
+    margin-top: 1rem;
+
+    @include md {
+      margin-top: 3rem;
+      padding: 0;
+      flex-direction: row;
     }
-  }
 
-  &__row_range {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    & > * {
+      width: 100%;
+      max-width: 40rem;
+      @include md {
+        flex: 0 0 calc((100% - 2 * 1.8rem) / 3);
+        max-width: calc((100% - 2 * 1.8rem) / 3);
+      }
+    }
 
-    gap: 1.8rem;
+    &_range {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      row-gap: 1.8rem;
+      width: 100%;
+
+      @include md {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 1.8rem;
+      }
+    }
   }
 
   &__field {
@@ -178,7 +196,7 @@
 
   &__select-option {
     padding: 6px 16px;
-    font-size: 0.9375rem;
+    font-size: 1.2rem;
     color: #ffffff;
     cursor: pointer;
     white-space: nowrap;
@@ -214,9 +232,27 @@
 
     grid-column: span 2;
     margin-top: 1.875rem;
+    margin-bottom: 10px;
 
     flex-direction: column;
-    gap: 10px;
+    gap: 14px;
+
+    @include lg {
+      gap: 10px;
+      margin-bottom: 0;
+    }
+
+    &-value {
+      position: absolute;
+      bottom: -20px;
+      right: 0;
+      min-width: 2rem;
+
+      @include lg {
+        top: 0;
+        right: 0;
+      }
+    }
   }
 
   &__range-label {
@@ -289,19 +325,16 @@
     }
   }
 
-  &__range-value {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 2rem;
-  }
-
   &__field_file {
     position: relative;
     display: block;
 
+    width: 100%;
     max-height: 3rem;
+    max-width: 40rem;
     margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
 
     padding: 0 1rem;
 
@@ -332,7 +365,7 @@
     background: url("../img/icon-clipboard.webp") center / contain no-repeat;
   }
 
-  &__file-icon_selected {
+  & .selected {
     background: url("../img/icon-check.webp") center / contain no-repeat;
   }
 

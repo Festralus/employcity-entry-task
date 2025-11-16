@@ -26,12 +26,27 @@ h3,
 .h3,
 p {
   font-family: "Lato", "Raleway", Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
 }
 
 @media (min-width: 768px) {
   html {
     font-size: 14px;
     line-height: 14px;
+  }
+  ul,
+  ol,
+  a,
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  p {
+    font-size: 1rem;
+    line-height: 1.1rem;
   }
 }
 @media (min-width: 1024px) {
@@ -100,14 +115,40 @@ main {
 .order {
   position: relative;
   display: block;
-  padding-top: 7.5rem;
+  padding-top: 3.5rem;
   padding-bottom: 9.4rem;
   width: 100%;
   background-image: url("../img/background.webp");
-  background-size: cover;
+  background-size: 1050%;
   background-repeat: no-repeat;
   background-position: center 10%;
   text-align: center;
+}
+@media (min-width: 425px) {
+  .order {
+    background-size: 750%;
+  }
+}
+@media (min-width: 768px) {
+  .order {
+    background-size: 450%;
+  }
+}
+@media (min-width: 1024px) {
+  .order {
+    background-size: 400%;
+  }
+}
+@media (min-width: 1200px) {
+  .order {
+    background-size: 350%;
+  }
+}
+@media (min-width: 1815px) {
+  .order {
+    padding-top: 7.5rem;
+    background-size: cover;
+  }
 }
 .order__title {
   font-weight: 800;
@@ -595,13 +636,11 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
 }
 
 .order-form__file-button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  width: 100%;
-  height: 48px;
-  padding: 0 24px;
+  height: 3rem;
   background-color: transparent;
   font-weight: 600;
   font-size: 0.9rem;
@@ -618,26 +657,31 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
 #submit_button {
   position: relative;
   display: block;
-  grid-column: span 3;
-  margin: 2.6rem auto auto auto;
   width: 100%;
   min-width: fit-content;
-  max-width: 23.125rem;
 }
 
 .steps {
   position: relative;
   display: block;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 .steps__list {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: clamp(1rem, 3vw, 8.625rem);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 8.625rem);
   width: max-content;
   margin-inline: auto;
+}
+@media (min-width: 1815px) {
+  .steps__list {
+    margin-top: 5rem;
+    align-items: flex-start;
+    flex-direction: row;
+  }
 }
 .steps__list::before {
   content: "";
@@ -704,25 +748,47 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
 }
 
 .order-form {
-  margin-top: 5rem;
+  margin-top: 3rem;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 0.5rem;
 }
 .order-form__row {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
   place-content: center;
   gap: 1.8rem;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .order-form__row {
+    margin-top: 3rem;
+    padding: 0;
+    flex-direction: row;
+  }
 }
 .order-form__row > * {
-  flex: 0 0 calc((100% - 3.6rem) / 3);
-  max-width: calc((100% - 3.6rem) / 3);
+  width: 100%;
+  max-width: 40rem;
+}
+@media (min-width: 768px) {
+  .order-form__row > * {
+    flex: 0 0 calc((100% - 3.6rem) / 3);
+    max-width: calc((100% - 3.6rem) / 3);
+  }
 }
 .order-form__row_range {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.8rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  row-gap: 1.8rem;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .order-form__row_range {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 1.8rem;
+  }
 }
 .order-form__field {
   position: relative;
@@ -846,7 +912,7 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
 }
 .order-form__select-option {
   padding: 6px 16px;
-  font-size: 0.9375rem;
+  font-size: 1.2rem;
   color: #ffffff;
   cursor: pointer;
   white-space: nowrap;
@@ -873,8 +939,27 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
   display: flex;
   grid-column: span 2;
   margin-top: 1.875rem;
+  margin-bottom: 10px;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
+}
+@media (min-width: 1024px) {
+  .order-form__range {
+    gap: 10px;
+    margin-bottom: 0;
+  }
+}
+.order-form__range-value {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  min-width: 2rem;
+}
+@media (min-width: 1024px) {
+  .order-form__range-value {
+    top: 0;
+    right: 0;
+  }
 }
 .order-form__range-label {
   align-self: start;
@@ -936,17 +1021,15 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
 .order-form__control_range:hover::-moz-range-thumb {
   box-shadow: 0 0 0 3px rgba(66, 169, 237, 0.35);
 }
-.order-form__range-value {
-  position: absolute;
-  top: 0;
-  right: 0;
-  min-width: 2rem;
-}
 .order-form__field_file {
   position: relative;
   display: block;
+  width: 100%;
   max-height: 3rem;
+  max-width: 40rem;
   margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 1rem;
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.85);
@@ -968,7 +1051,7 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
   flex: 0 0 20px;
   background: url("../img/icon-clipboard.webp") center/contain no-repeat;
 }
-.order-form__file-icon_selected {
+.order-form .selected {
   background: url("../img/icon-check.webp") center/contain no-repeat;
 }
 .order-form__file-text {

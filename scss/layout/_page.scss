@@ -11,16 +11,37 @@ main {
   position: relative;
   display: block;
 
-  padding-top: 7.5rem;
+  padding-top: 3.5rem;
   padding-bottom: 9.4rem;
 
   width: 100%;
   background-image: url("../img/background.webp");
-  background-size: cover;
+  background-size: 1050%;
   background-repeat: no-repeat;
   background-position: center 10%;
 
   text-align: center;
+
+  @include xs {
+    background-size: 750%;
+  }
+
+  @include md {
+    background-size: 450%;
+  }
+
+  @include lg {
+    background-size: 400%;
+  }
+
+  @include xl {
+    background-size: 350%;
+  }
+
+  @include xxl {
+    padding-top: 7.5rem;
+    background-size: cover;
+  }
 
   &__title {
     font-weight: 800;
