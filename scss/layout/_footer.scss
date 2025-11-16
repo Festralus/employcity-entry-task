@@ -1,0 +1,114 @@
+@use "../base/" as *;
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  min-height: 80px;
+  background-color: #3d4050;
+
+  padding: 0 2rem;
+
+  color: #fff;
+  font-size: 14px;
+
+  column-gap: clamp(0.5rem, 4vw, 3rem);
+
+  &__divider {
+    flex: 0 0 1px;
+    align-self: center;
+    height: 1.1rem;
+    background-color: $color-white;
+    opacity: 0.3;
+  }
+
+  &__payments {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: clamp(0.5rem, 3vw, 2.5rem);
+    min-width: 320px;
+  }
+
+  &__payment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__payment_icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 0.5rem;
+
+    pointer-events: none;
+    user-select: none;
+  }
+
+  &__payment_text {
+    white-space: nowrap;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    column-gap: clamp(1.2rem, 3vw, 2.5rem);
+    min-width: 260px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: #fff;
+    white-space: nowrap;
+
+    &:hover,
+    &:active {
+      color: #42a9ed;
+    }
+
+    &:visited {
+      color: #fff;
+    }
+  }
+
+  &__link-icon {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5rem;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__link-icon_mail {
+    background-image: url("../img/icon-mail.webp");
+  }
+
+  &__link-icon_vk {
+    background-image: url("../img/icon-vk.webp");
+  }
+}
+
+a[href^="mailto"] {
+  color: #fff !important;
+  text-decoration: none !important;
+
+  &:visited {
+    color: #fff !important;
+  }
+
+  &:hover,
+  &:active {
+    color: #42a9ed !important;
+  }
+}

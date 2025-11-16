@@ -3,3 +3,8 @@ body.page {
   background-color: #272733;
   color: #fff;
 }
+
+html,
+body {
+  overscroll-behavior-x: none;
+}

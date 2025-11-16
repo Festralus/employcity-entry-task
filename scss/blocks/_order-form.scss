@@ -1,0 +1,331 @@
+@use "../base/" as *;
+
+.order-form {
+  margin-top: 5rem;
+  width: 100%;
+
+  padding: 0 2rem;
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    place-content: center;
+    gap: 1.8rem;
+
+    & > * {
+      flex: 0 0 calc((100% - 2 * 1.8rem) / 3);
+      max-width: calc((100% - 2 * 1.8rem) / 3);
+    }
+  }
+
+  &__row_range {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 1.8rem;
+  }
+
+  &__field {
+    position: relative;
+    display: block;
+  }
+
+  &__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
+  }
+
+  &__control {
+    width: 100%;
+    height: 48px;
+    padding: 0 0.7rem;
+
+    border-radius: 3px;
+    border: none;
+    outline: none;
+
+    font-size: 1.125rem;
+    line-height: 1.2rem;
+    color: #272733;
+    background: rgba(255, 255, 255, 0.85);
+
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+
+    &::placeholder {
+      color: rgba(39, 39, 51, 0.7);
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 1px #42a9ed;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 2px #42a9ed;
+      background-color: #ffffff;
+    }
+
+    &_select {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+
+      padding-right: 2.6rem;
+      cursor: pointer;
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+
+      &:focus-visible {
+        color: #ffffff;
+        outline: none;
+        background-color: rgba(61, 64, 80, 0.85);
+        box-shadow: 0 0 0 1px #3d4050;
+      }
+      & option {
+        background-color: #272733;
+        color: #ffffff;
+        font-size: inherit;
+
+        &:hover {
+          background-color: #3d4050;
+        }
+
+        &:checked {
+          color: #42a9ed;
+        }
+      }
+
+      // Scrollbar
+      ::-webkit-scrollbar {
+        width: 7px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #3d4050;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3e9cdc;
+        border-radius: 3px;
+      }
+      scrollbar-width: thin;
+      scrollbar-color: #3e9cdc #3d4050;
+
+      // Background
+      &::-webkit-dropdown-menu {
+        color: transparent;
+        text-shadow: 0 0 0 #272733;
+      }
+      &::-webkit-listbox {
+        color: transparent;
+        text-shadow: 0 0 0 #272733;
+      }
+      &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #272733;
+      }
+      & option {
+        background-color: #272733 !important;
+        color: #ffffff;
+      }
+    }
+    &_arrow {
+      position: absolute;
+      display: block;
+
+      width: 10px;
+
+      top: 50%;
+      right: 1rem;
+
+      transform: translateY(-50%) rotate(0deg);
+      transition: transform 0.25s ease;
+      pointer-events: none;
+
+      color: #3d4050;
+    }
+
+    &_range {
+      position: relative;
+      display: block;
+
+      width: 100%;
+      height: 6px;
+      padding: 0;
+      background: #dcdcdc;
+      border-radius: 4px;
+      box-shadow: none;
+    }
+
+    &_file {
+      display: none;
+      // position: absolute;
+      // inset: 0;
+      // opacity: 0;
+      // cursor: pointer;
+    }
+  }
+
+  &__field_sys-type:focus-within .order-form__control_arrow {
+    color: $color-white;
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  &__range {
+    position: relative;
+    display: flex;
+
+    grid-column: span 2;
+
+    margin-top: 1.875rem;
+
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__range-label {
+    position: relative;
+    display: block;
+
+    align-self: start;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #ffffff;
+  }
+
+  &__range-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  &__control_range {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    flex: 1 1 auto;
+
+    &::-webkit-slider-runnable-track {
+      height: 6px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+
+      &:hover {
+        background-color: $color-white;
+      }
+    }
+
+    &::-moz-range-track {
+      height: 6px;
+      background: #dcdcdc;
+      border-radius: 4px;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      margin-top: -6px;
+      border-radius: 50%;
+      background: #42a9ed;
+      border: 3px solid #286690;
+      cursor: pointer;
+      transition: box-shadow 0.2s ease;
+    }
+
+    &::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #42a9ed;
+      border: 3px solid #286690;
+      cursor: pointer;
+      transition: box-shadow 0.2s ease;
+    }
+
+    &:hover::-webkit-slider-thumb {
+      box-shadow: 0 0 0 3px rgba(66, 169, 237, 0.35);
+    }
+
+    &:hover::-moz-range-thumb {
+      box-shadow: 0 0 0 3px rgba(66, 169, 237, 0.35);
+    }
+  }
+
+  &__range-value {
+    display: block;
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    min-width: 2rem;
+  }
+
+  &__field_file {
+    position: relative;
+    display: block;
+
+    max-height: 3rem;
+    margin-top: auto;
+
+    padding: 0 1rem;
+
+    grid-column: auto;
+
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 3px;
+    border: 2px solid $color-white;
+    outline: none;
+
+    transition: border 0.2s ease, background-color 0.2s ease;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      background-color: $color-white;
+
+      border: 2px solid $color-accent;
+    }
+  }
+
+  &__file-icon {
+    width: 18px;
+    height: 20px;
+    flex: 0 0 20px;
+    background: url("../img/icon-clipboard.webp") center / contain no-repeat;
+  }
+  &__file-icon_selected {
+    width: 18px;
+    height: 20px;
+    flex: 0 0 20px;
+    background: url("../img/icon-check.webp") center/contain no-repeat;
+  }
+
+  &__file-text {
+    display: block;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 25rem;
+  }
+
+  @media (min-width: 1200px) {
+  }
+}

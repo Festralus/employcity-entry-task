@@ -1,17 +1,70 @@
+@use "../base/" as *;
+
 .button {
   position: relative;
   display: flex;
+
+  cursor: pointer;
+
+  width: 100%;
+  min-width: 7.7rem;
+  max-width: 11.56rem;
 
   justify-content: center;
   align-items: center;
   padding: 0.9375rem 0.625rem;
 
   border-radius: 0.25rem;
+
+  &_primary {
+    color: $color-btn-primary-text-default;
+    background-color: $color-btn-primary-bg-default;
+    border: 1px solid $color-white;
+  }
+
+  &_secondary {
+    color: $color-btn-secondary-text-default;
+    background-color: $color-white;
+    border: 1px solid #6f6d7b;
+  }
 }
 
-.button_primary {
-  color: #fff;
-  background-color: #3e9cdc;
-  border: 1px solid #ffffff;
-  max-width: 11.5rem;
+.order-form {
+  &__file-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    height: 48px;
+    padding: 0 24px;
+
+    background-color: transparent;
+
+    font-weight: 600;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    text-transform: uppercase;
+    color: $color-black;
+
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+
+    .order-form__field_file:focus-within & {
+      box-shadow: 0 0 0 2px #42a9ed;
+    }
+  }
+}
+
+#submit_button {
+  position: relative;
+  display: block;
+
+  grid-column: span 3;
+  margin: 2.6rem auto auto auto;
+
+  width: 100%;
+  min-width: fit-content;
+  max-width: 23.125rem;
 }
