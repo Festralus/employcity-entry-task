@@ -1,6 +1,7 @@
 # Contacts
 
 Омельченко Андрей Викторович
+
 Phone: +7 (911) 185-85-30  
 Telegram: https://t.me/andrey_omelch  
 E-mail: omel.andrei@mail.ru
@@ -62,19 +63,6 @@ E-mail: omel.andrei@mail.ru
 ### Sticky header
 
 Работает корректно во всех современных браузерах.
-
-## Установка и запуск
-
-```bash
-npm install
-npm run dev
-```
-
-## Сборка:
-
-```bash
-npm run build
-```
 
 ### Особенности реализации
 
