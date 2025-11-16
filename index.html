@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
 
+    <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/img/favicon.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="page">
@@ -96,7 +100,7 @@
         </header>
 
         <!-- Шаги -->
-        <section class="steps" id="steps">
+        <div class="steps" id="steps">
           <ol class="steps__list">
             <li class="steps__item">
               <div class="steps__visual">
@@ -165,7 +169,7 @@
               <p class="steps__text">Esse cillum dolore eu fugiat</p>
             </li> -->
           </ol>
-        </section>
+        </div>
 
         <!-- Форма -->
         <form
@@ -177,8 +181,8 @@
           novalidate
         >
           <div class="order-form__row order-form__row_top">
-            <label class="order-form__field order-form__field_sys-type">
-              <span class="order-form__label">Тип системы</span>
+            <div class="order-form__field order-form__field_sys-type">
+              <label class="order-form__label"> Тип системы </label>
 
               <div class="order-form__select" data-select>
                 <button
@@ -186,6 +190,7 @@
                   class="order-form__control order-form__control_select"
                   aria-haspopup="listbox"
                   aria-expanded="false"
+                  aria-labelledby="system_type"
                   data-select-toggle
                 >
                   <span data-select-label>Выберите тип системы</span>
@@ -253,7 +258,7 @@
                       data-value="maxime"
                       tabindex="0"
                     >
-                      Maxime perferendis amet
+                      Maxime перferendis amet
                     </li>
                     <li
                       class="order-form__select-option"
@@ -262,64 +267,19 @@
                     >
                       Excepturi velit nam veniam
                     </li>
-
-                    <!-- Блоки для проверки верстки -->
-
-                    <!-- <li
-                      class="order-form__select-option"
-                      data-value="unde"
-                      tabindex="0"
-                    >
-                      Unde dolorum
-                    </li> -->
-                    <!-- <li
-                      class="order-form__select-option"
-                      data-value="rerum"
-                      tabindex="0"
-                    >
-                      Rerum dicta temporibus
-                    </li> -->
-                    <!-- <li
-                      class="order-form__select-option"
-                      data-value="deleniti"
-                      tabindex="0"
-                    >
-                      Deleniti aliquid esse
-                    </li> -->
-                    <!-- <li
-                      class="order-form__select-option"
-                      data-value="accusamus"
-                      tabindex="0"
-                    >
-                      Accusamus aliquam dolore
-                    </li> -->
-                    <!-- <li
-                      class="order-form__select-option"
-                      data-value="molestias"
-                      tabindex="0"
-                    >
-                      Molestias nihil eos sapiente
-                    </li> -->
-                    <!-- <li
-                      class="order-form__select-option"
-                      data-value="impedit"
-                      tabindex="0"
-                    >
-                      Impedit minus velit rem ut
-                    </li> -->
                   </ul>
                 </div>
 
                 <input
                   type="hidden"
                   name="system_type"
-                  autocomplete="off"
+                  id="system_type"
                   data-select-input
-                  required
                 />
               </div>
-            </label>
+            </div>
 
+            <!-- остальные поля (email, name) оставляешь без изменений -->
             <label class="order-form__field order-form__field_email">
               <span class="order-form__label">Ваш e-mail</span>
               <input
@@ -343,32 +303,6 @@
                 required
               />
             </label>
-
-            <!-- Блоки для проверки верстки -->
-
-            <!-- <label class="order-form__field order-form__field_name">
-              <span class="order-form__label">Ваше ***</span>
-              <input
-                class="order-form__control"
-                type="text"
-                name="***"
-                autocomplete="***"
-                placeholder="Ваше ***"
-                required
-              />
-            </label> -->
-
-            <!-- <label class="order-form__field order-form__field_name">
-              <span class="order-form__label">Ваше ***</span>
-              <input
-                class="order-form__control"
-                type="text"
-                name="***"
-                autocomplete="***"
-                placeholder="Ваше ***"
-                required
-              />
-            </label> -->
           </div>
 
           <div class="order-form__row_range">
