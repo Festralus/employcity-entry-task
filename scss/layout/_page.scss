@@ -1,6 +1,8 @@
 @use "../base/" as *;
 
 main {
+  overflow: hidden;
+
   position: relative;
   display: block;
 
@@ -12,7 +14,7 @@ main {
   display: block;
 
   padding-top: 3.5rem;
-  padding-bottom: 9.4rem;
+  padding-bottom: 3.4rem;
 
   width: 100%;
   background-image: url("../img/background.webp");
@@ -32,6 +34,7 @@ main {
 
   @include lg {
     background-size: 400%;
+    padding-bottom: 5.4rem;
   }
 
   @include xl {
@@ -40,6 +43,7 @@ main {
 
   @include xxl {
     padding-top: 7.5rem;
+    padding-bottom: 9.4rem;
     background-size: cover;
   }
 

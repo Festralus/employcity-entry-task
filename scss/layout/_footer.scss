@@ -1,33 +1,112 @@
 @use "../base/" as *;
 
 .footer {
+  overflow: hidden;
+
   position: relative;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
   min-height: 80px;
   background-color: #3d4050;
 
-  padding: 0 clamp(1rem, 16vw, 23.5rem);
+  padding: 0;
+  gap: 1rem;
 
   color: #fff;
   font-size: 14px;
 
-  &__divider {
+  @include md {
+    padding-top: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  @include xxl {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  @include xxl {
+    padding: 0 clamp(1rem, 16vw, 23.5rem);
+  }
+  &__copyright {
+    order: 10;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include md {
+      width: 100%;
+    }
+
+    @include xxl {
+      width: auto;
+      order: 1;
+      margin-bottom: 0;
+    }
+  }
+
+  .first-divider {
+    order: 9;
     flex: 0 0 1px;
     align-self: center;
-    height: 1.1rem;
+    width: 95vw;
+    height: 1px;
     background-color: $color-white;
     opacity: 1;
+
+    @include md {
+      flex: 0 0 100%;
+    }
+    @include xxl {
+      width: 1px;
+      flex: 0 0 1px;
+      order: 2;
+      height: 1.1rem;
+    }
+  }
+  .second-divider {
+    flex: 0 0 1px;
+    align-self: center;
+    width: 95vw;
+    height: 1px;
+    background-color: $color-white;
+    opacity: 1;
+
+    @include md {
+      height: 2.1rem;
+      width: 1px;
+    }
+
+    @include xxl {
+      order: 4;
+      height: 1.1rem;
+      width: 1px;
+    }
   }
 
   &__payments {
+    margin-top: 1rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     column-gap: clamp(0.5rem, 3vw, 2.5rem);
+    row-gap: 0.5rem;
     min-width: 320px;
+
+    @include md {
+      margin-top: 0;
+    }
+
+    @include xxl {
+      order: 3;
+      margin-top: 0;
+    }
   }
 
   &__payment {
@@ -56,6 +135,10 @@
     justify-content: space-evenly;
     column-gap: clamp(1.2rem, 3vw, 2.5rem);
     min-width: 260px;
+
+    @include xxl {
+      order: 5;
+    }
   }
 
   &__link {
@@ -67,13 +150,13 @@
     color: #fff;
     white-space: nowrap;
 
+    &:visited {
+      color: #fff;
+    }
+
     &:hover,
     &:active {
       color: #42a9ed;
-    }
-
-    &:visited {
-      color: #fff;
     }
   }
 
