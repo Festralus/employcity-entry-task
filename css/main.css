@@ -438,6 +438,7 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
 @media (min-width: 1815px) {
   .hero__title {
     margin-top: 6.4rem;
+    margin-left: 0;
     font-size: 3rem;
     line-height: 3.625rem;
   }
@@ -458,6 +459,11 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
 @media (min-width: 1200px) {
   .hero__perks {
     margin-left: clamp(3rem, 5.5vw, 5rem);
+  }
+}
+@media (min-width: 1815px) {
+  .hero__perks {
+    margin-left: 0;
   }
 }
 .hero__text {
@@ -513,6 +519,7 @@ a[href^=mailto]:hover, a[href^=mailto]:active {
 }
 @media (min-width: 1815px) {
   .hero__actions {
+    margin-left: 0;
     flex-direction: row;
     gap: 1.875rem;
   }

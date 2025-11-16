@@ -71,6 +71,7 @@
 
     @include xxl {
       margin-top: 6.4rem;
+      margin-left: 0;
       font-size: 3rem;
       line-height: 3.625rem;
     }
@@ -90,6 +91,9 @@
     }
     @include xl {
       margin-left: clamp(3rem, 5.5vw, 5rem);
+    }
+    @include xxl {
+      margin-left: 0;
     }
   }
 
@@ -154,6 +158,7 @@
       margin-left: 4rem;
     }
     @include xxl {
+      margin-left: 0;
       flex-direction: row;
       gap: 1.875rem;
     }
