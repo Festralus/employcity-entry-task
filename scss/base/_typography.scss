@@ -57,3 +57,10 @@ p {
     line-height: 1rem;
   }
 }
+
+@media (min-width: 2100px) {
+  html {
+    font-size: clamp(16px, calc(16px + (20 * ((100vw - 2100px) / 1920))), 32px);
+    line-height: 1rem;
+  }
+}

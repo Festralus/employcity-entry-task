@@ -44,7 +44,7 @@
   &_primary {
     color: $color-btn-primary-text-default;
     background-color: $color-btn-primary-bg-default;
-    border: 1px solid $color-white;
+    border: calc(max(1px, 0.08rem)) solid $color-white;
     transition: background-color 0.2s ease;
 
     &:hover {
@@ -58,7 +58,7 @@
   &_secondary {
     color: $color-btn-secondary-text-default;
     background-color: $color-btn-secondary-bg-default;
-    border: 1px solid #6f6d7b;
+    border: calc(max(1px, 0.08rem)) solid #6f6d7b;
 
     margin-top: 0.5rem;
     margin-bottom: 4rem;
@@ -81,7 +81,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 0.7rem;
 
     height: 3rem;
 
@@ -97,7 +97,7 @@
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
 
     .order-form__field_file:focus-within & {
-      box-shadow: 0 0 0 2px #42a9ed;
+      box-shadow: 0 0 0 0.125rem #42a9ed;
     }
   }
 }

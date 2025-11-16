@@ -10,14 +10,13 @@
   align-items: center;
   justify-content: space-between;
 
-  min-height: 80px;
+  min-height: Calc(min(5rem, 80px));
   background-color: #3d4050;
 
   padding: 0;
   gap: 1rem;
 
   color: #fff;
-  font-size: 14px;
 
   @include md {
     padding-top: 1rem;
@@ -52,10 +51,10 @@
 
   .first-divider {
     order: 9;
-    flex: 0 0 1px;
+    flex: 0 0 calc(max(1px, 0.08rem));
     align-self: center;
     width: 95vw;
-    height: 1px;
+    height: calc(max(1px, 0.08rem));
     background-color: $color-white;
     opacity: 1;
 
@@ -63,29 +62,29 @@
       flex: 0 0 100%;
     }
     @include xxl {
-      width: 1px;
-      flex: 0 0 1px;
+      width: calc(max(1px, 0.08rem));
+      flex: 0 0 calc(max(1px, 0.08rem));
       order: 2;
       height: 1.1rem;
     }
   }
   .second-divider {
-    flex: 0 0 1px;
+    flex: 0 0 calc(max(1px, 0.08rem));
     align-self: center;
     width: 95vw;
-    height: 1px;
+    height: calc(max(1px, 0.08rem));
     background-color: $color-white;
     opacity: 1;
 
     @include md {
       height: 2.1rem;
-      width: 1px;
+      width: calc(max(1px, 0.08rem));
     }
 
     @include xxl {
       order: 4;
       height: 1.1rem;
-      width: 1px;
+      width: calc(max(1px, 0.08rem));
     }
   }
 
@@ -116,8 +115,8 @@
   }
 
   &__payment_icon {
-    width: 24px;
-    height: 24px;
+    width: 1.2rem;
+    height: 1.2rem;
     object-fit: contain;
     margin-right: 0.5rem;
 
@@ -161,9 +160,9 @@
   }
 
   &__link-icon {
-    flex: 0 0 18px;
-    width: 18px;
-    height: 18px;
+    flex: 0 0 1.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
     margin-right: 0.5rem;
 
     background-repeat: no-repeat;

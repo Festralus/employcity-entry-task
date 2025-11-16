@@ -42,9 +42,13 @@
         left: calc(3.125rem + 1.5rem);
         right: calc(3.125rem + 1.5rem);
 
-        height: 6px;
-        background-image: radial-gradient(circle, #cfcfcf 3px, transparent 3px);
-        background-size: 20px 6px;
+        height: 0.4rem;
+        background-image: radial-gradient(
+          circle,
+          #cfcfcf 0.2rem,
+          transparent 0.2rem
+        );
+        background-size: 1.3rem 0.4rem;
         background-repeat: repeat-x;
         background-position: center;
 
@@ -99,25 +103,5 @@
     display: block;
     position: relative;
     margin-top: 1.25rem;
-  }
-
-  &.steps--column {
-    &__list {
-      text-align: left;
-      font-size: 16px;
-      width: 100%;
-      margin-inline: 0;
-
-      &::before {
-        display: none;
-      }
-    }
-
-    &__item {
-      display: block;
-      max-width: 20rem;
-      width: 100%;
-      margin: 0 auto 1.5rem;
-    }
   }
 }
